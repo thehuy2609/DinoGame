@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>Bush (1).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,578},{133,65}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{133,65}}</string>
+				<key>sourceSize</key>
+				<string>{133,65}</string>
+			</dict>
+
+			<key>Bush (2).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,644},{133,65}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{133,65}}</string>
+				<key>sourceSize</key>
+				<string>{133,65}</string>
+			</dict>
+
+			<key>Bush (3).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,888},{73,47}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{73,47}}</string>
+				<key>sourceSize</key>
+				<string>{73,47}</string>
+			</dict>
+
+			<key>Bush (4).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,936},{73,46}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{73,46}}</string>
+				<key>sourceSize</key>
+				<string>{73,46}</string>
+			</dict>
+
+			<key>Crate.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,810},{77,77}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{77,77}}</string>
+				<key>sourceSize</key>
+				<string>{77,77}</string>
+			</dict>
+
+			<key>Mushroom_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{91,755},{49,41}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{49,41}}</string>
+				<key>sourceSize</key>
+				<string>{49,41}</string>
+			</dict>
+
+			<key>Mushroom_2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{78,810},{50,41}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{50,41}}</string>
+				<key>sourceSize</key>
+				<string>{50,41}</string>
+			</dict>
+
+			<key>Sign_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{74,888},{63,65}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{63,65}}</string>
+				<key>sourceSize</key>
+				<string>{63,65}</string>
+			</dict>
+
+			<key>Sign_2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{74,954},{62,64}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{62,64}}</string>
+				<key>sourceSize</key>
+				<string>{62,64}</string>
+			</dict>
+
+			<key>Stone.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,755},{90,54}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{90,54}}</string>
+				<key>sourceSize</key>
+				<string>{90,54}</string>
+			</dict>
+
+			<key>Tree_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,710},{116,44}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{116,44}}</string>
+				<key>sourceSize</key>
+				<string>{116,44}</string>
+			</dict>
+
+			<key>Tree_2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,276},{282,301}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{282,301}}</string>
+				<key>sourceSize</key>
+				<string>{282,301}</string>
+			</dict>
+
+			<key>Tree_3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{282,275}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{282,275}}</string>
+				<key>sourceSize</key>
+				<string>{282,275}</string>
+			</dict>
+
+		</dict>
+
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>size</key>
+			<string>{512,1024}</string>
+			<key>textureFileName</key>
+			<string>jungle.png</string>
+			</dict>
+		</dict>
+</plist>

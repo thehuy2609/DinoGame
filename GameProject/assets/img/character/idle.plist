@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>Idle (1).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{370,0},{369,394}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{7,31},{369,394}}</string>
+				<key>sourceSize</key>
+				<string>{680,472}</string>
+			</dict>
+
+			<key>Idle (10).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{369,390}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{8,35},{369,390}}</string>
+				<key>sourceSize</key>
+				<string>{680,472}</string>
+			</dict>
+
+			<key>Idle (2).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,391},{369,391}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{7,34},{369,391}}</string>
+				<key>sourceSize</key>
+				<string>{680,472}</string>
+			</dict>
+
+			<key>Idle (3).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{370,395},{368,387}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{8,38},{368,387}}</string>
+				<key>sourceSize</key>
+				<string>{680,472}</string>
+			</dict>
+
+			<key>Idle (4).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1109,0},{367,384}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{9,41},{367,384}}</string>
+				<key>sourceSize</key>
+				<string>{680,472}</string>
+			</dict>
+
+			<key>Idle (5).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{739,395},{368,382}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{10,43},{368,382}}</string>
+				<key>sourceSize</key>
+				<string>{680,472}</string>
+			</dict>
+
+			<key>Idle (6).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1477,0},{367,381}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{12,44},{367,381}}</string>
+				<key>sourceSize</key>
+				<string>{680,472}</string>
+			</dict>
+
+			<key>Idle (7).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1477,382},{367,380}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{14,45},{367,380}}</string>
+				<key>sourceSize</key>
+				<string>{680,472}</string>
+			</dict>
+
+			<key>Idle (8).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1108,388},{368,383}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{12,42},{368,383}}</string>
+				<key>sourceSize</key>
+				<string>{680,472}</string>
+			</dict>
+
+			<key>Idle (9).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{740,0},{368,387}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{10,38},{368,387}}</string>
+				<key>sourceSize</key>
+				<string>{680,472}</string>
+			</dict>
+
+		</dict>
+
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>size</key>
+			<string>{2048,1024}</string>
+			<key>textureFileName</key>
+			<string>sprites.png</string>
+			</dict>
+		</dict>
+</plist>
