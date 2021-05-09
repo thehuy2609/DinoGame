@@ -6,12 +6,14 @@ cc.Class({
         _jumping: false,
         _nextPosition: 0,
         _currentPosition: 0,
+        gravity : 10,
         force : 0,
     },
 
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
+        this.node.getComponent(cc.RigidBody).gravityScale = this.gravity;
         this.node.getComponent(cc.Animation).play("RunAnim");
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN,this.jumpPlayer,this);
         // cc.director.getPhysicsManager().enabled = true;
@@ -25,6 +27,7 @@ cc.Class({
                     this._jumping = true;
                     this.node.getComponent(cc.Animation).play("RunAnim");
                     this.node.getComponent(cc.RigidBody).applyForceToCenter(new cc.Vec2(0, this.force += 250000), true);
+                    // this.node.getComponent(cc.RigidBody).gravityScale = 
                 }
             break;
         }
