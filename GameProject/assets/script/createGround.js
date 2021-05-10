@@ -24,7 +24,7 @@ cc.Class({
 
     update (dt) {
         this._timerCreateGround +=dt;
-        if(this._timerCreateGround >= 1/5){
+        if(this._timerCreateGround >= 1/6){
             let groundObject = cc.instantiate(this.prefabGround);
             groundObject.setPosition(this.node.width/2 - 128, 0);
             groundObject.parent = this.node;

@@ -1092,7 +1092,7 @@
       "y": 0
     },
     "_angularVelocity": 0,
-    "_fixedRotation": false,
+    "_fixedRotation": true,
     "enabledContactListener": false,
     "bullet": false,
     "awakeOnLoad": true,
@@ -1135,8 +1135,7 @@
     "_jumping": false,
     "_nextPosition": 0,
     "_currentPosition": 0,
-    "gravity": 1,
-    "force": 0,
+    "_timer": 0,
     "_id": "6aE+E5cqJP5JCKlwzVz23p"
   },
   {
