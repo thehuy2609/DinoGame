@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "enemyFly1",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.26666666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "22679495-50c8-47ea-a5b3-cce322fcd437"
+            }
+          },
+          {
+            "frame": 0.08333333333333333,
+            "value": {
+              "__uuid__": "5a9a4f46-1ef9-40fe-81cc-638ccb5daf73"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "b55eb98f-9765-4f49-892c-309ba9d62391"
+            }
+          },
+          {
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "1befec12-3714-49b2-855f-91ae31431c66"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
