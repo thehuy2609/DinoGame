@@ -1,3 +1,5 @@
+const EventEmitter = require('eventEmitter');
+
 cc.Class({
     extends: cc.Component,
 
@@ -5,20 +7,32 @@ cc.Class({
         prefabCactusEnemy : cc.Prefab,
         prefabFlyingEnemy : cc.Prefab,
         prefabFlyingEnemy2 : cc.Prefab,
-        _timerCreateFreezeEnemy:0,
+        _timerCreateFreezeEnemy: 0,
+        _speed: 1,
     },
 
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {},
+    onLoad (){
+        EventEmitter.instance.registerEvent("sendScore", this.updateSpeed, this);
+    },
+
 
     start () {
 
     },
+    
+    updateSpeed(times){
+        if(times>0){
+            this._speed = times;
+        }
+    },
 
     update (dt) {
         this._timerCreateFreezeEnemy +=dt;
-        if(this._timerCreateFreezeEnemy >= 1.5){
+        // this.updateSpeed();
+        if(this._timerCreateFreezeEnemy >= 2/this._speed){
+            
             let randomNumber = Math.floor(Math.random() * 3) + 1;
             let enemyCreate;
             if(randomNumber === 1){
