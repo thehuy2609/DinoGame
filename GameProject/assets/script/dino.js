@@ -1,3 +1,4 @@
+const EventEmitter = require('eventEmitter');
 
 cc.Class({
     extends: cc.Component,
@@ -8,6 +9,7 @@ cc.Class({
         // _currentPosition: 0,
         _canJump: false,
         _jumping : false,
+        _die: false,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -24,23 +26,26 @@ cc.Class({
     },
 
     jump(){
-        if(this._canJump === true){
+        if(this._canJump === true && this._die === false){
             this._jumping = true;
         }
-        
     },
 
     onCollisionEnter: function (other, self) {
         if(other.node.group === "Ground"){
-            this._canJump = true;
-            this._status = "idle";
-            this.node.getComponent(cc.Animation).play("RunAnim");
-            this.node.stopAllActions()
+            if(this._die === false){
+                this._canJump = true;
+                this._status = "idle";
+                this.node.getComponent(cc.Animation).play("RunAnim");
+                this.node.stopAllActions()
+            }
         }else if(other.node.group === "Enemy"){
-            //cc.log('toangg')
+            this.node.getComponent(cc.Animation).play("DeadAnim");
+            EventEmitter.instance.emit('endGame');
+            this._die = true;
         }
     },
-
+    
     onKeyDown: function (event) {
         switch(event.keyCode) {
             case cc.macro.KEY.space:

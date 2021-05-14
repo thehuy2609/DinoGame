@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>Dead (1).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{562,0},{406,356}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{33,69},{406,356}}</string>
+				<key>sourceSize</key>
+				<string>{680,472}</string>
+			</dict>
+
+			<key>Dead (2).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{492,428},{420,363}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{77,108},{420,363}}</string>
+				<key>sourceSize</key>
+				<string>{680,472}</string>
+			</dict>
+
+			<key>Dead (3).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,673},{426,315}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{120,153},{426,315}}</string>
+				<key>sourceSize</key>
+				<string>{680,472}</string>
+			</dict>
+
+			<key>Dead (4).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,428},{491,244}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{123,194},{491,244}}</string>
+				<key>sourceSize</key>
+				<string>{680,472}</string>
+			</dict>
+
+			<key>Dead (5).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{561,222}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{104,212},{561,222}}</string>
+				<key>sourceSize</key>
+				<string>{680,472}</string>
+			</dict>
+
+			<key>Dead (6).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,223},{552,204}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{109,234},{552,204}}</string>
+				<key>sourceSize</key>
+				<string>{680,472}</string>
+			</dict>
+
+			<key>Dead (7).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,223},{552,204}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{109,234},{552,204}}</string>
+				<key>sourceSize</key>
+				<string>{680,472}</string>
+			</dict>
+
+			<key>Dead (8).png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,223},{552,204}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{109,234},{552,204}}</string>
+				<key>sourceSize</key>
+				<string>{680,472}</string>
+			</dict>
+
+		</dict>
+
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>size</key>
+			<string>{1024,1024}</string>
+			<key>textureFileName</key>
+			<string>dead.png</string>
+			</dict>
+		</dict>
+</plist>

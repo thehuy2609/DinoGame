@@ -118,8 +118,8 @@
       "__id__": 1
     },
     "_enabled": true,
-    "_moving": false,
-    "positionDestroy": 0,
+    "_positionDestroy": 0,
+    "_speed": 1,
     "_id": ""
   },
   {
