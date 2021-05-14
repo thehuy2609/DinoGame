@@ -24,12 +24,12 @@ cc.Class({
 
     update (dt) {
         this._timerCreateGround +=dt;
-        if(this._timerCreateGround >= 1/6){
-            let groundObject = cc.instantiate(this.prefabGround);
-            groundObject.setPosition(this.node.width/2 - 128, 0);
-            groundObject.parent = this.node;
-            this._timerCreateGround =0;
-        }
+        // if(this._timerCreateGround >= 1/6){
+        //     let groundObject = cc.instantiate(this.prefabGround);
+        //     groundObject.setPosition(this.node.width/2, 0);
+        //     groundObject.parent = this.node;
+        //     this._timerCreateGround =0;
+        // }
         
         // this.node.setPosition((this.node.position.x - (500*dt)), this.node.position.y);
         
