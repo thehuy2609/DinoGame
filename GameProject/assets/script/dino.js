@@ -40,9 +40,12 @@ cc.Class({
                 this.node.stopAllActions()
             }
         }else if(other.node.group === "Enemy"){
-            this.node.getComponent(cc.Animation).play("DeadAnim");
-            EventEmitter.instance.emit('endGame');
-            this._die = true;
+            if (this._die === false){
+                this.node.getComponent(cc.Animation).play("DeadAnim");
+                EventEmitter.instance.emit('endGame');
+                this._die = true;
+                this._canJump = false;
+            }
         }
     },
     

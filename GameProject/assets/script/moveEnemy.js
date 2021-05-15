@@ -20,9 +20,11 @@ cc.Class({
     start () {
         //this.speed = this.getSpeed();
         //cc.log(this.speed);
-        let duration = 5 - this.speed/2;
-        if( duration === 1){
-            duration = 1;
+        
+        let duration = 4 - this.speed/2;
+        //cc.log(duration);
+        if( duration <= 2){
+            duration = 2;
         }
         this._positionDestroy = - (this.node.parent.width/2 + this.node.width/2 );
         

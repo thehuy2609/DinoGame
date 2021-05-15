@@ -26,7 +26,7 @@ cc.Class({
 
     update (dt) {
         if(this._status === "init"){
-            this.node.y -= dt*200;
+            this.node.y -= dt*100;
         }
     },
 });

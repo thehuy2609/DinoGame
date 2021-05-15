@@ -1,31 +1,38 @@
+const EventEmitter = require('eventEmitter');
 
 cc.Class({
     extends: cc.Component,
 
     properties: {
-            
+        _movingBackground : false,
     },
 
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {},
+    onLoad (){
+        EventEmitter.instance.registerEvent("endGame", this.endGame.bind(this));
+        EventEmitter.instance.registerEvent("clickPlay", this.startGame.bind(this));
+    },
 
     start () {
-        // let moveLeftBg = cc.tween().to( 10, {x: - this.node.width});
-        // let moveBackBg = cc.tween().to( 0.01, {x: this.node.width});
-        
-        // let actionBackground = cc.tween().sequence(moveLeftBg, moveBackBg);
-        // cc.tween(this.node).then(actionBackground).repeatForever().start();
-        // cc.tween(this.node)
-        //     .to(10, {x: - this.node.width})
-        //     .start();
+        //cc.log(this._movingBackground);
+    },
+
+    startGame(){
+        this._movingBackground = true;
+    },
+
+    endGame(){
+        this._movingBackground = false;
     },
 
     update (dt) {
-        if(this.node.x > -this.node.width + 10 ){
-            this.node.x -=10;
-        }else{
-            this.node.x = this.node.width
+        if(this._movingBackground === true){
+            if(this.node.x > - this.node.width){
+                this.node.x -= 5;
+            }else{
+                this.node.x = this.node.width -5;
+            }    
         }
     },
 });

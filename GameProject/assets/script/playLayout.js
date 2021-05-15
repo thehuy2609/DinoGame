@@ -13,7 +13,8 @@ cc.Class({
         _timerUpdateScore: 0,
         _numberOfUpdateScore: 1,
         _score: 0,
-        _endGame : false,
+        _speedCreateEnemy: 1.5,
+        _playingGame : true,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -25,26 +26,18 @@ cc.Class({
         EventEmitter.instance.registerEvent("endGame", this.endGame.bind(this));
     },
 
-
     start () {
     },
-    
-    // updateSpeed(times){
-    //     if(times>0){
-    //         this._speed = times;
-    //     }
-    // },
 
     endGame(){
-        this._endGame = true;
+        this._playingGame = false;
     },
 
     update (dt) {
-        if(this._endGame === false){
+        if(this._playingGame === true){
             this._timerCreateEnemy +=dt;
             this._timerUpdateSpeed += dt;
             this._timerUpdateScore += dt;
-            //this._timerEmitScore += dt;
             if(this._timerUpdateScore > 0.1){
                 this._score +=1;
                 this.lblScore.string = this._score;
@@ -52,17 +45,18 @@ cc.Class({
             }
             if(this._timerUpdateSpeed > 5 ){
                 this._numberOfUpdateScore +=1;
-                //EventEmitter.instance.emit('sendScore',this._numberOfEmitScore);
                 this._timerUpdateSpeed =0;
             }
-
-            if(this._timerCreateEnemy >= 1.5){
+            if(this._numberOfUpdateScore === 5){
+                this._speedCreateEnemy = this.randomNumber(7,10)/10;
+            }
+            if(this._timerCreateEnemy >= this._speedCreateEnemy){
                 let randomNumber = Math.floor(Math.random() * 2) + 1;
                 
                 let enemyCreate;
                 if(randomNumber === 1){
                     enemyCreate = cc.instantiate(this.prefabCactusEnemy);
-                    enemyCreate.setPosition(this.node.width/2+100, 0);
+                    enemyCreate.setPosition(this.node.width/2+100, -50);
                 }else if(randomNumber === 2){
                     enemyCreate = cc.instantiate(this.prefabFlyingEnemy2);
                     enemyCreate.setPosition(this.node.width/2+100, this.randomPositionY([-60,120]));
