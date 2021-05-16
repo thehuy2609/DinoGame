@@ -6,10 +6,6 @@ cc.Class({
         
     },
 
-    // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {},
-
     start () {
 
     },
@@ -26,5 +22,4 @@ cc.Class({
         EventEmitter.instance.emit('clickHome');
     },
 
-    // update (dt) {},
 });

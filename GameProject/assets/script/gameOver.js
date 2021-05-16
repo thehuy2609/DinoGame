@@ -14,22 +14,18 @@ cc.Class({
         arrRanking: [],
     },
 
-    // LIFE-CYCLE CALLBACKS:
-
     onLoad (){
         this._content = this.scrollViewRanking.node.getChildByName("view").getChildByName("content");
         EventEmitter.instance.registerEvent("sendScore", this.getScore.bind(this));
-        let rank = cc.sys.localStorage.getItem('topScore');
+        let rank = cc.sys.localStorage.getItem('topScores');
         if(rank !== null){
             this.arrRanking = JSON.parse(rank);
         }else{
             this.arrRanking =[];
         }
-        
     },
 
     start () {
-        //cc.log(this.arrRanking);
     },
 
     clickHome(){
@@ -49,17 +45,9 @@ cc.Class({
         }
         newRank.name = this.editBoxName.string;
         newRank.score = this._score;
-        // if (typeof (this.arrRanking) == 'undefined' || this.arrRanking == null) {
-        //     this.arrRanking = [];
-        // }
         this.arrRanking.push(newRank);
         this.sortArrRanking(this.arrRanking);
-        //cc.log(this.arrRanking);
-        cc.sys.localStorage.setItem('topScore', JSON.stringify(this.arrRanking));
-        //var dataLocal = JSON.parse(cc.sys.localStorage.getItem('top10'));
-        //dataLocal.map((item) => {
-            //Emitter.instance.emit('addMasterName', item.name, item.score);
-        //})
+        cc.sys.localStorage.setItem('topScores', JSON.stringify(this.arrRanking));
         this.showRanking(this.arrRanking);
         this.scrollViewRanking.node.active = true;
         this.btnName.node.active = false;
@@ -69,10 +57,6 @@ cc.Class({
     showRanking(arrayRanking){
         let firstPositionPrefabs= 0;
         this._content.removeAllChildren(true);
-        // for (let i = 0; i < this._content.children.length; i++) {
-        //     this._content.removeChild(this._content.children[i]);
-        // }
-        
         for (let i = 0; i < arrayRanking.length; i++) {
             let itemRanking = cc.instantiate(this.prefabRanking);
             let nameRanking = itemRanking.getChildByName('lblName');
@@ -94,5 +78,4 @@ cc.Class({
         }
     },
 
-    // update (dt) {},
 });

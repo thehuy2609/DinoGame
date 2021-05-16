@@ -10,8 +10,6 @@ cc.Class({
         gameOverNode : cc.Node,
     },
 
-    // LIFE-CYCLE CALLBACKS:
-
     onLoad (){
         EventEmitter.instance = new EventEmitter();
         EventEmitter.instance.registerEvent("clickPlay", this.startGame.bind(this));
@@ -49,9 +47,4 @@ cc.Class({
 
     },
 
-    // update (dt) {},
 });
-
-/*
-    
-*/

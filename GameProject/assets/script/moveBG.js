@@ -7,15 +7,13 @@ cc.Class({
         _movingBackground : false,
     },
 
-    // LIFE-CYCLE CALLBACKS:
-
     onLoad (){
         EventEmitter.instance.registerEvent("endGame", this.endGame.bind(this));
         EventEmitter.instance.registerEvent("clickPlay", this.startGame.bind(this));
     },
 
     start () {
-        //cc.log(this._movingBackground);
+        
     },
 
     startGame(){

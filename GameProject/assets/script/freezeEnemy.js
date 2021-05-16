@@ -6,10 +6,6 @@ cc.Class({
         
     },
 
-    // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {},
-
     start () {
         this._status = "init"; 
     },
@@ -17,11 +13,7 @@ cc.Class({
     onCollisionEnter: function (other, self) {
         if(other.node.group === "Ground"){
             this._status = "idle";
-            //this.node.stopAllActions();
         }
-        // else if(other.node.group === "Enemy"){
-        //     cc.log('thua cmnr');
-        // }
     },
 
     update (dt) {

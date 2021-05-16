@@ -4,23 +4,16 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        //_jumping: false,
-        // _nextPosition: 0,
-        // _currentPosition: 0,
         _canJump: false,
         _jumping : false,
         _die: false,
     },
 
-    // LIFE-CYCLE CALLBACKS:
-
     onLoad () {
-        //this.node.getComponent(cc.RigidBody).gravityScale = 2;
         this.node.getComponent(cc.Animation).play("RunAnim");
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
         EventEmitter.instance.registerEvent("clickPlay", this.playGame.bind(this));
     },
-
 
     start () {
         this._status = "init";
@@ -34,6 +27,7 @@ cc.Class({
         this._status = "init";
         this.node.getComponent(cc.Animation).play("RunAnim");
     },
+
     jump(){
         if(this._canJump === true && this._die === false){
             this._jumping = true;
@@ -54,7 +48,6 @@ cc.Class({
                 EventEmitter.instance.emit('endGame');
                 this._die = true;
                 this._canJump = false;
-                // this.node.stopAllActions();
             }
         }
     },

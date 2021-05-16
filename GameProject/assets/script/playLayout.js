@@ -5,7 +5,6 @@ cc.Class({
 
     properties: {
         prefabCactusEnemy : cc.Prefab,
-        prefabFlyingEnemy : cc.Prefab,
         prefabFlyingEnemy2 : cc.Prefab,
         lblScore : cc.Label,
         _timerCreateEnemy: 0,
@@ -17,12 +16,9 @@ cc.Class({
         _playingGame : true,
     },
 
-    // LIFE-CYCLE CALLBACKS:
-
     onLoad (){
         let manager = cc.director.getCollisionManager();
         manager.enabled = true;
-        //manager.enabledDebugDraw = true;
         EventEmitter.instance.registerEvent("endGame", this.endGame.bind(this));
         EventEmitter.instance.registerEvent("clickPlay", this.playGame.bind(this));
     },
@@ -65,7 +61,6 @@ cc.Class({
             }
             if(this._timerCreateEnemy >= this._speedCreateEnemy){
                 let randomNumber = Math.floor(Math.random() * 2) + 1;
-                
                 let enemyCreate;
                 if(randomNumber === 1){
                     enemyCreate = cc.instantiate(this.prefabCactusEnemy);
@@ -74,17 +69,11 @@ cc.Class({
                     enemyCreate = cc.instantiate(this.prefabFlyingEnemy2);
                     enemyCreate.setPosition(this.node.width/2+100, this.randomPositionY([-60,120]));
                 }
-                // else if(randomNumber === 3){
-                //     enemyCreate = cc.instantiate(this.prefabFlyingEnemy);
-                //     enemyCreate.setPosition(this.node.width/2+100, this.randomPositionY([-80,0]));
-                // }
-                //cc.log(this._numberOfUpdateScore);
                 enemyCreate.getComponent('moveEnemy').speed = this._numberOfUpdateScore;
                 enemyCreate.parent = this.node;
                 this._timerCreateEnemy =0;
             }
         }
-        
     },
 
     randomNumber(min,max){
