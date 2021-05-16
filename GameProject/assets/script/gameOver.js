@@ -73,7 +73,7 @@ cc.Class({
         //     this._content.removeChild(this._content.children[i]);
         // }
         
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < arrayRanking.length; i++) {
             let itemRanking = cc.instantiate(this.prefabRanking);
             let nameRanking = itemRanking.getChildByName('lblName');
             let scoreRanking = itemRanking.getChildByName('lblScore');
