@@ -6,8 +6,8 @@ cc.Class({
     properties: {
         menuNode : cc.Node,
         gameNode : cc.Node,
-        settingNode : cc.Node,
-        highScoreNode : cc.Node,
+        introNode : cc.Node,
+        gameOverNode : cc.Node,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -15,29 +15,34 @@ cc.Class({
     onLoad (){
         EventEmitter.instance = new EventEmitter();
         EventEmitter.instance.registerEvent("clickPlay", this.startGame.bind(this));
-        EventEmitter.instance.registerEvent("clickSetting", this.settingGame.bind(this));
-        EventEmitter.instance.registerEvent("clickHighScore", this.highScore.bind(this));
+        EventEmitter.instance.registerEvent("clickIntro", this.introGame.bind(this));
+        EventEmitter.instance.registerEvent("clickHome", this.backHome.bind(this));
+        EventEmitter.instance.registerEvent("endGame", this.endGame.bind(this));
     },
 
     startGame(){
         this.menuNode.active = false;
         this.gameNode.active = true;
-        this.settingNode.active = false;
-        this.highScoreNode.active = false;
+        this.introNode.active = false;
+        this.gameOverNode.active = false;
     },
 
-    settingGame(){
-        this.gameNode.active = false;
+    introGame(){
         this.menuNode.active = false;
-        this.settingNode.active = true;
-        this.highScoreNode.active = false;
+        this.gameNode.active = false;
+        this.introNode.active = true;
+        this.gameOverNode.active = false;
     },
 
-    highScore(){
+    backHome(){
+        this.menuNode.active = true;
         this.gameNode.active = false;
-        this.menuNode.active = false;
-        this.settingNode.active = false;
-        this.highScoreNode.active = true;
+        this.introNode.active = false;
+        this.gameOverNode.active = false;
+    },
+
+    endGame(){
+        this.gameOverNode.active = true;
     },
 
     start () {
@@ -46,3 +51,7 @@ cc.Class({
 
     // update (dt) {},
 });
+
+/*
+    
+*/

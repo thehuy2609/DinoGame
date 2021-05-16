@@ -8,6 +8,7 @@ cc.Class({
         _positionDestroy :0,
         speed:1,
         _moving : true,
+        _newGame : false,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -15,6 +16,7 @@ cc.Class({
     onLoad (){
         //EventEmitter.instance.registerEvent("sendScore", this.updateSpeed.bind(this));
         EventEmitter.instance.registerEvent("endGame", this.endGame.bind(this));
+        EventEmitter.instance.registerEvent("clickPlay", this.playNewGame.bind(this));
     },
 
     start () {
@@ -40,6 +42,10 @@ cc.Class({
     endGame(){
         this._moving = false;
     },
+
+    playNewGame(){
+        this._newGame = true;
+    },
     // getSpeed(){
     //     return this.speed;
     // },
@@ -47,6 +53,9 @@ cc.Class({
     update (dt) {
         if(this._moving === false){
             this.node.stopAllActions();
+        }
+        if(this._newGame === true){
+            this.node.destroy();
         }
         //this.setSpeed();
         //cc.log(this.speed);

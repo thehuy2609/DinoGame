@@ -22,15 +22,28 @@ cc.Class({
     onLoad (){
         let manager = cc.director.getCollisionManager();
         manager.enabled = true;
-        manager.enabledDebugDraw = true;
+        //manager.enabledDebugDraw = true;
         EventEmitter.instance.registerEvent("endGame", this.endGame.bind(this));
+        EventEmitter.instance.registerEvent("clickPlay", this.playGame.bind(this));
     },
 
     start () {
+    
+    },
+
+    playGame(){
+        this._timerCreateEnemy =0;
+        this._timerUpdateSpeed =0;
+        this._timerUpdateScore =0;
+        this._numberOfUpdateScore =0;
+        this._score =0;
+        this._speedCreateEnemy = 1.5;
+        this._playingGame = true;
     },
 
     endGame(){
         this._playingGame = false;
+        EventEmitter.instance.emit('sendScore',this._score);
     },
 
     update (dt) {
@@ -48,7 +61,7 @@ cc.Class({
                 this._timerUpdateSpeed =0;
             }
             if(this._numberOfUpdateScore === 5){
-                this._speedCreateEnemy = this.randomNumber(7,10)/10;
+                this._speedCreateEnemy = 0.8;
             }
             if(this._timerCreateEnemy >= this._speedCreateEnemy){
                 let randomNumber = Math.floor(Math.random() * 2) + 1;

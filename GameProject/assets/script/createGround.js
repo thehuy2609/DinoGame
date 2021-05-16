@@ -12,9 +12,9 @@ cc.Class({
     // onLoad () {},
 
     start () {
-        let firstX = -this.node.width/2;
+        let firstX = -this.node.width/2+64;
         
-        for (let i = 0; i < 17; i++) {
+        for (let i = 0; i < 10; i++) {
             let groundObject = cc.instantiate(this.prefabGround);
             groundObject.setPosition(firstX, 0);
             groundObject.parent = this.node;

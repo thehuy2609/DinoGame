@@ -18,12 +18,12 @@ cc.Class({
         EventEmitter.instance.emit('clickPlay');
     },
 
-    clickSetting(){
-        EventEmitter.instance.emit('clickSetting');
+    clickIntro(){
+        EventEmitter.instance.emit('clickIntro');
     },
 
-    clickHighScore(){
-        EventEmitter.instance.emit('clickHighScore');
+    clickHome(){
+        EventEmitter.instance.emit('clickHome');
     },
 
     // update (dt) {},

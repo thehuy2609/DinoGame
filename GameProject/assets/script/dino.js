@@ -18,13 +18,22 @@ cc.Class({
         //this.node.getComponent(cc.RigidBody).gravityScale = 2;
         this.node.getComponent(cc.Animation).play("RunAnim");
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+        EventEmitter.instance.registerEvent("clickPlay", this.playGame.bind(this));
     },
 
 
     start () {
-        this._status = "init"; 
+        this._status = "init";
     },
 
+    playGame(){
+        this.node.y = 28; 
+        this._canJump = false;
+        this._jumping = false;
+        this._die = false;
+        this._status = "init";
+        this.node.getComponent(cc.Animation).play("RunAnim");
+    },
     jump(){
         if(this._canJump === true && this._die === false){
             this._jumping = true;
@@ -37,7 +46,7 @@ cc.Class({
                 this._canJump = true;
                 this._status = "idle";
                 this.node.getComponent(cc.Animation).play("RunAnim");
-                this.node.stopAllActions()
+                this.node.stopAllActions();
             }
         }else if(other.node.group === "Enemy"){
             if (this._die === false){
@@ -45,6 +54,7 @@ cc.Class({
                 EventEmitter.instance.emit('endGame');
                 this._die = true;
                 this._canJump = false;
+                // this.node.stopAllActions();
             }
         }
     },
